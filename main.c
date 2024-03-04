@@ -6,7 +6,7 @@
 /*   By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 09:45:30 by rkrechun          #+#    #+#             */
-/*   Updated: 2024/03/04 12:42:10 by rkrechun         ###   ########.fr       */
+/*   Updated: 2024/03/04 15:10:54 by rkrechun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
 	t_stack_node	*b;
-	char 			**args;
+	char			**args;
 
 	a = NULL;
 	b = NULL;

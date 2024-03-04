@@ -6,7 +6,7 @@
 /*   By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:03:40 by rkrechun          #+#    #+#             */
-/*   Updated: 2024/03/04 12:11:19 by rkrechun         ###   ########.fr       */
+/*   Updated: 2024/03/04 15:10:29 by rkrechun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	free_stack(t_stack_node **stack)
 		free(current);
 		current = tmp;
 	}
-	if(*stack)
+	if (*stack)
 		*stack = NULL;
 }
 
