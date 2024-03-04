@@ -6,7 +6,7 @@
 /*   By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:32:45 by rkrechun          #+#    #+#             */
-/*   Updated: 2024/02/23 18:05:43 by rkrechun         ###   ########.fr       */
+/*   Updated: 2024/03/04 12:11:53 by rkrechun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,14 +45,14 @@ t_stack_node	*find_max(t_stack_node *stack);
 int				error_syntax(char *str_n);
 int				error_duplicate(t_stack_node *a, int n);
 void			free_stack(t_stack_node **stack);
-void			free_errors(t_stack_node **stack, char **argv);
+void			free_errors(t_stack_node **stack, char **argv, bool flag_argc_2);
 void			free_matrix(char **argv);
 
 //Initialization
 void			current_index(t_stack_node *stack);
 void			set_cheapest(t_stack_node *stack);
 void			init_node_a(t_stack_node*a, t_stack_node *b);
-void			init_stack(t_stack_node **a, char **argv);
+void			init_stack(t_stack_node **a, char **argv, bool flag_argc_2);
 void			prep_for_push(t_stack_node **stack, t_stack_node *top_node,
 					char stack_name);
 char			**split(char *s, char c);

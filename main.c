@@ -6,7 +6,7 @@
 /*   By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 09:45:30 by rkrechun          #+#    #+#             */
-/*   Updated: 2024/02/23 16:00:56 by rkrechun         ###   ########.fr       */
+/*   Updated: 2024/03/04 11:45:45 by rkrechun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int	main(int argc, char **argv)
 {
 	t_stack_node	*a;
 	t_stack_node	*b;
+	char 			**args;
 
 	a = NULL;
 	b = NULL;
@@ -36,13 +37,13 @@ int	main(int argc, char **argv)
 		return (1);
 	else if (argc == 2)
 	{
-		argv = split(argv[1], ' ');
-		init_stack(&a, argv + 1);
-		free_matrix(argv + 1);
+		args = split(argv[1], ' ');
+		init_stack(&a, args + 1, 2 == argc);
 	}
 	else
-		init_stack(&a, argv + 1);
+		init_stack(&a, argv + 1, 2 == argc);
 	check_sorting(&a, &b);
 	free_stack(&a);
+	free_stack(&b);
 	return (0);
 }

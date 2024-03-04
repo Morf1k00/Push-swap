@@ -6,7 +6,7 @@
 /*   By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:03:40 by rkrechun          #+#    #+#             */
-/*   Updated: 2024/02/23 15:59:37 by rkrechun         ###   ########.fr       */
+/*   Updated: 2024/03/04 12:11:19 by rkrechun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ void	free_stack(t_stack_node **stack)
 		free(current);
 		current = tmp;
 	}
-	*stack = NULL;
+	if(*stack)
+		*stack = NULL;
 }
 
 void	free_matrix(char **argv)
@@ -69,10 +70,11 @@ void	free_matrix(char **argv)
 	free(argv - 1);
 }
 
-void	free_errors(t_stack_node **stack, char **argv)
+void	free_errors(t_stack_node **stack, char **argv, bool flag_argc_2)
 {
 	free_stack(stack);
-	free_matrix(argv);
-	write(1, "Error\n", 6);
+	if (flag_argc_2)
+		free_matrix(argv);
+	write(2, "Error\n", 6);
 	exit(1);
 }
