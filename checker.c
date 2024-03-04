@@ -6,7 +6,7 @@
 /*   By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:06:57 by rkrechun          #+#    #+#             */
-/*   Updated: 2024/03/04 12:31:45 by rkrechun         ###   ########.fr       */
+/*   Updated: 2024/03/04 15:03:53 by rkrechun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,11 +76,7 @@ static void	call_get_next(t_stack_node **a, t_stack_node **b)
 	if (stack_sorted(*a) && len_f == len)
 		write(1, "OK\n", 3);
 	else
-	{
 		write(1, "KO\n", 3);
-		printf("stack len in start : %d\n", len);
-		printf("stack len in end: %d\n", len_f);
-	}
 }
 
 int	main(int argc, char **argv)

@@ -6,7 +6,7 @@
 #    By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/12 16:30:54 by rkrechun          #+#    #+#              #
-#    Updated: 2024/03/04 13:39:52 by rkrechun         ###   ########.fr        #
+#    Updated: 2024/03/04 14:45:07 by rkrechun         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ BONUS = checker
 
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra -g -O2 #-fsanitize=address -fno-omit-frame-pointer
+CFLAGS = -Wall -Werror -Wextra -g -O2
 
 MAKE_LIB = ar -rcs
 
