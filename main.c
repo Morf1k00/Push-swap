@@ -6,7 +6,7 @@
 /*   By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 09:45:30 by rkrechun          #+#    #+#             */
-/*   Updated: 2024/03/04 11:45:45 by rkrechun         ###   ########.fr       */
+/*   Updated: 2024/03/04 12:42:10 by rkrechun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (1);
+		return (0);
 	else if (argc == 2)
 	{
 		args = split(argv[1], ' ');
