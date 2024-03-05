@@ -6,7 +6,7 @@
 /*   By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 13:03:40 by rkrechun          #+#    #+#             */
-/*   Updated: 2024/03/04 15:10:29 by rkrechun         ###   ########.fr       */
+/*   Updated: 2024/03/05 12:33:00 by rkrechun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	error_syntax(char *str_n)
 {
-	if (!(*str_n == '+' || *str_n == '-' || (*str_n >= '0' && *str_n <= '9')))
+	if (!(*str_n == '+' || *str_n == '-'
+			|| (*str_n >= '0' && *str_n <= '9')))
 		return (1);
 	if ((*str_n == '+' || *str_n == '-')
 		&& !(str_n[1] >= '0' && str_n[1] <= '9'))
@@ -70,7 +71,8 @@ void	free_matrix(char **argv)
 	free(argv - 1);
 }
 
-void	free_errors(t_stack_node **stack, char **argv, bool flag_argc_2)
+void	free_errors(t_stack_node **stack,
+			char **argv, bool flag_argc_2)
 {
 	free_stack(stack);
 	if (flag_argc_2)
