@@ -6,7 +6,7 @@
 /*   By: rkrechun <rkrechun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 09:37:57 by rkrechun          #+#    #+#             */
-/*   Updated: 2024/03/04 12:12:36 by rkrechun         ###   ########.fr       */
+/*   Updated: 2024/03/05 12:39:12 by rkrechun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ static void	append_node(t_stack_node **stack, int n)
 	}
 }
 
-void	init_stack(t_stack_node **a, char **argv, bool flag_argc_2)
+void	init_stack(t_stack_node **a, char **argv,
+			bool flag_argc_2)
 {
 	long	n;
 	int		i;
